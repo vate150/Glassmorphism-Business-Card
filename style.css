@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    outline: 0; border: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(90deg, rgba(0,255,255) 0%, rgba(128,128,255)  100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* design card body starts */
+.card {
+    position: relative;
+    width: 31rem;
+    height: 19rem;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+    border-top: 0.06rem solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    backdrop-filter: none;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(90deg, rgba(0,255,255) 0%, rgba(128,128,255)  100%);
+}
+/* design card body ends */
+
+/* design content in card starts fist image */
+.card .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -5rem;
+    gap: 1.25rem;
+}
+
+.card .content .imgBx {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.5rem rgba(255,255,255,0.1);
+}
+
+.card .content .imgBx img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* design content in card starts second detail */
+.card .content .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: #222;
+}
+
+.card .content .detail div {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card .content .detail h3 {
+    font-weight: 600;
+}
+
+.card .content .detail ion-icon {
+    font-size: 1.4em;
+}
+/* design content in card ends */
